@@ -1,0 +1,48 @@
+#!/bin/bash
+​
+#variables 
+output=$HOME/research/sys_info.txt
+ip=$(ip addr |grep inet | tail -2 | head -1)
+suids=$(find / -type f -perm /4000)
+​
+​
+#check if directory exists, create it if  not exists
+if [ ! -d $HOME/research ]
+then 
+	mkdir $HOME/research 
+fi 
+​
+#check if exists, delete if exists to start a new file 
+if [ -f $output  ]
+then 
+	rm $output 
+fi 
+​
+#echo "A Quick System Audit Script" 
+#date 
+#echo " " 
+#echo -e "Machine Type Info:"
+#echo -e $MACHTYPE
+#echo -e "Uname Info: \n$(uname -a) \n"  
+#echo -e "$ip \n"
+#echo -e "IP Info: \n$(ip addr | head -9 | tail -1) \n" 
+#echo -e "\nHostname is: \n$(hostname -s" 
+#echo -e "\nDNS Info: \n$(cat /etc/resolv.conf)" >> $output
+#echo -e "\nMemory Info: \n$(free)"  
+#echo -e "\nThe current users logged in are: \n$(who -a)\n" 
+​
+​
+#ps aux -m | awk {'print $1, $2, $3, $4, $11'} > ~/research2/sys_info.txt
+​
+echo $suids >> $output 
+​
+#Useful Loops Activity 
+files=(
+'/etc/shadow'
+'/etc/passwd'
+'/etc/hosts'
+)
+​
+for files in ${files[@]}; 
+do 
+    if [
