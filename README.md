@@ -83,11 +83,3 @@ We have installed the following Beats on these machines:
 
 These Beats allow us to collect the following information from each machine:
 - The Filebeat collects log data on file system information.
-
-### Using the Playbook
-In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
-
-SSH into the control node and follow the steps below:
-- Copy the Filebeat configuration file to /etc/filebeat/filebeat.yml.
-- Update the configuration file to include the internal IP address of the ELK machine
-- Run the playbook, and navigate to http://52.249.177.14:5601/app/kibana to check that the installation worked as expected.
