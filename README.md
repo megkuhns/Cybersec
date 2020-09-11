@@ -4,7 +4,7 @@ Files created during my cybersecurity bootcamp
 
 The files in this repository were used to configure the network depicted below.
 
-Cybersec/Images/Screenshot (341).png
+/Images/Screenshot (341).png
 
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, >
