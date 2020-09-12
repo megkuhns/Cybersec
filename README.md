@@ -7,10 +7,8 @@ The files in this repository were used to configure the network depicted below.
 ![](Cybersec/Images/Screenshot(341).png)
 
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, >
-
-This document contains the following details:
-- Description of the Topologu
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, this document contains the following details:
+- Description of the Topology
 - Access Policies
 - ELK Configuration
   - Beats in Use
@@ -23,7 +21,7 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly responsive, in addition to restricting traffic to the network.
-- Load balancers protect servers from being flooded with network traffic that could be a result of a DoS attack. The advantage of a jump box is the flexibility and versati>
+- Load balancers protect servers from being flooded with network traffic that could be a result of a DoS attack. The advantage of a jump box is the flexibility and    versatility. It is cost efficient and provides a ton of options.  
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to files and system configuraitons.
 - Filebeat watches for changes within files.
 - Metricbeat records systems logs (i.e. opening and closing docker container).
@@ -59,7 +57,8 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it is faster and more efficient than >
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it is faster and more efficient than configuring each individual machine one at a time. 
+
 The playbook implements the following tasks:
 - Install Docker.io, pip3, and Docker python module
 - Increase virtual memory
